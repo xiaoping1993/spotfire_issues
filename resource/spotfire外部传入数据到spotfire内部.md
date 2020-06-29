@@ -1,5 +1,6 @@
 ##一：问题起源：
 	卫计委项目，想要将我们spotfire数据分析项目接入他们平台，协议通过在我们url后面加参数sec（des3方式加密的待传输数据）方式将数据代入spotfire内部使用
+
 ##二：解决方案：
 	进过研究发现可能有两种方式可以解决
 	方式一：spotfire单点登录参考：
@@ -8,6 +9,7 @@
 		https://community.tibco.com/wiki/spotfire-adding-parameters-web-custom-authenticator
 	方式二：confurationBlock：参考：
 		https://community.tibco.com/wiki/create-configuration-block-tibco-spotfire
+
 ## 三：解决问题
 	方式一后续在研究
 	本次原理：通过配置一个java服务接受url带过来的参数，解密sec参数，再重定向到配置好的spotfire外部触发login对应的地址
