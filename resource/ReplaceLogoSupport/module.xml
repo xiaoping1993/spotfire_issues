@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<module>
+  <id>d2e914bc-2a4c-4f1b-8381-479c0e5685b9</id>
+  <name>ReplaceLogoSupport</name>
+  <version>1.0.15009.2407</version>
+  <intendedClient>Core</intendedClient>
+  <resources>
+    <publicResource name="cobranding.config" relativePath="cobranding.config" />
+  </resources>
+</module>

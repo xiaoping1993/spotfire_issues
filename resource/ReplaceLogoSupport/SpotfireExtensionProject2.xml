@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<pbp:PackageBuilderProject SchemaVersion="1.1" Id="d2e914bc-2a4c-4f1b-8381-479c0e5685b9" Name="ReplaceLogoSupport" Version="1.0.15009.2407" IntendedClient="Core" xmlns:pbp="http://spotfire.tibco.com/PackageBuilderProject.xsd">
+  <pbp:ModuleFile RelativePath="module.xml" UpdateAutomatically="true" />
+  <pbp:BuildFolder RelativePath="" />
+  <pbp:Files>
+    <pbp:File RelativePath="banner.png" Included="true" ExtensionAssembly="false" />
+    <pbp:File RelativePath="libraryNavigationLogo.png" Included="true" ExtensionAssembly="false" />
+    <pbp:File RelativePath="SpotfireExtensionProject1.xml" Included="true" ExtensionAssembly="false" />
+    <pbp:File RelativePath="WebHeader.htm" Included="true" ExtensionAssembly="false" />
+    <pbp:File RelativePath="cobranding.config" Included="true" ExtensionAssembly="false" ResourceName="cobranding.config" ResourceCulture="" />
+    <pbp:File RelativePath="module.xml" Included="true" ExtensionAssembly="false" />
+  </pbp:Files>
+</pbp:PackageBuilderProject>
