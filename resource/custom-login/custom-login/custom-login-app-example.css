@@ -1,0 +1,73 @@
+.error-label {
+    padding-top: 5px;
+}
+.twbs hr {
+    border-top: 1px solid #ccc;
+}
+
+.tss-list {
+    list-style: none;
+    padding: 0 0 0 0;
+    margin: auto;
+}
+.owner {
+    height: 50px;
+    font-size: 20px;
+    background-color: black;
+    color: white;
+    padding: 13px;
+}
+img.logocss {
+    height: 35px;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+.logo {
+    box-shadow: 0 2px 3px -1px #afacac;
+    padding-bottom: 8px;
+}
+input {
+    border-radius: 5px;
+    height: 38px;
+    width: 220px;
+    border-style: solid;
+    border-color: #ece9e9;
+    border-width: 1px;
+    font-size: 14px;   
+    margin-left: 36px !important;
+}
+button {
+    width: 100px;
+    height: 30px;
+    border-radius: 3px;
+    border:none;	 
+    font-size: 14px;
+    text-align: center;
+    margin-left: 90px !important;
+}
+button:hover {
+    background-color: #2287e6;
+}
+label{
+    font-family: inherit;
+    font-size: 15px;
+    margin: 20px auto !important;
+    width: 100%;
+    text-align: center;
+}
+form{
+    width: 300px;
+    margin: 0px auto;
+    height: 100%;
+    margin-top: 300px;
+    border: 1px solid #bbbaba;
+    border-radius: 5px;
+}
+.form-group {
+    margin-bottom: 20px;
+    width: 100%
+}
+.bottom {
+    text-align: center;
+    margin-top: 230px;
+}

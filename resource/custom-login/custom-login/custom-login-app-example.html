@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head angular-app="tssCustomLoginApp">
+    <title>Login</title>
+
+    <!-- Override IE compatibility mode with latest mode from the Standards prototype -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Icon -->
+    <link rel="icon" href="../../favicon.ico" type="image/x-icon" />
+
+    <!-- Browser meta tags -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <!-- Character encoding for the HTML document -->
+    <meta charset="UTF-8" />
+
+    <!-- End of Browser meta tags -->
+
+    <link rel="stylesheet" type="text/css" href="../min/app-lib.css?b3c5f8b">
+    <link rel="stylesheet" type="text/css" href="../min/app.css?b3c5f8b">
+    <link rel="stylesheet" type="text/css" href="../custom-login/custom-login-app-example.css?b3c5f8b">
+    <script type="text/javascript" src="../min/third-party.js?b3c5f8b"></script>
+    <script type="text/javascript" src="../min/app.js?b3c5f8b"></script>
+    <script type="text/javascript" src="../min/customization.js?b3c5f8b"></script>
+    <script type="text/javascript" src="../custom-login/custom-login-app-example.js?b3c5f8b"></script>
+
+	<style>
+		html {
+			font-size: 12px;
+		}
+
+		body {
+			line-height: 1;
+		}
+
+		label {
+			margin-bottom: 10px !important;
+		}
+	</style>
+</head>
+
+<body class="twbs">
+	<div class = "owner">
+		<span>PerkinElmer</span>
+	</div>
+	<div class = "logo">
+		<img src="logo.png" class = "logocss"/>
+	</div>
+    <div ng-controller="tssCustomLoginAppController" ng-cloak class="tss-frame">
+        <form class="form-horizontal" novalidate name="form">
+			<label>PerkinElmer Healthcare Solutions</label>
+            <div class="form-group">
+                <input type="text"
+                       id="inputEmail3"
+                       tabindex="1"
+                       ng-model="user.name"
+                       name="username"
+                       autofocus="autofocus"
+                       autocomplete="off"
+                       autocapitalize="off"
+                       autocorrect="off"
+                       spellcheck="false"
+                       ng-trim="false"
+					   placeholder="用户名">
+            </div>
+            <div class="form-group">
+                <input type="password"
+                       id="inputPassword3"
+                       tabindex="2"
+                       autocomplete="off"
+                       ng-model="user.password"
+                       name="password"
+					   placeholder="密码">
+            </div>
+
+            <div class="form-group">
+                 <button tabindex="5" ng-click="login()">登录</button>
+            </div>
+
+            <div class="form-group" ng-show="serverInfo.allowSaveInformation">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <label class="error-label" ng-if="errorInformation">{{errorInformation}}</label>
+                </div>
+            </div>
+
+            <div ng-show="serverInfo.webAuthProviders.length > 0" class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <hr>
+                        <ul class="tss-list">
+                            <li ng-repeat="provider in serverInfo.webAuthProviders">
+                                <button tabindex="6" ng-click="redirectToWebAuthProvider(provider.providerName)"" class="btn btn-default">Login with {{provider.label}}</button>
+                            </li>
+                        </ul>
+                </div>
+            </div>
+        </form>
+    </div>
+	<div class="bottom"><h2>此网站已失效，请从用户审批平台登录：https://172.30.100.145:6261<h2></div>
+</body>
+</html>

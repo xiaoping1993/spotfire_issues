@@ -88,6 +88,12 @@
     现在遇到的问题就在于：
       在宿主机不能ping通docker spotfire Linux container的情况下，如何解决在nodeManager 被 spotfire_server trust后，NodeManager不在是处于offline状态
 	目前问题还在持续跟踪中
+	跟进下问题：值钱虽然在上面操作解决了trust的问题但是，nm却一直处于offline的状态，同时解决了The machine contains more than 100 valid root certificates (278)的问题，需要我们做如下处理：
+	1）C:\TIBCO\tsnm\10.10.0\nm\config\nodemanager.properties对应参数nodemanager.supervisor.known对应值清空，同样位置spotfire_server对应的nodemanager.properties相应位置也清空，这步操作结束offline的状态应该就算解决了，之后安装automaticservice和webplawer，然后就会发现出现“The machine contains more than 100 valid root certificates (278)”异常，
+	2）参考：https://support.microsoft.com/en-us/help/2801679/ssl-tls-communication-problems-after-you-install-kb-931125
+		文件可以下载的文件下载不了，所以我们这里手动操作，到window10 的注册表中删除HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SystemCertificates\AuthRoot\Certificates里面所以证书，再启动就好了
+	3）证书问题解决后，发现问题还是存在，又有新的问题：nm的log中说一个ip（看他访问的内容应该是想要访问spotfire_server的服务）访问不到，然后这个ip又并不是宿主机提供的，我尝试主动给宿主机提供一个上面提供的ip，现在这个问题也没有了，但是又出现其他问题了
+	4）前段时间尝试了将C:\TIBCO\tsnm\10.10.0\nm\config\nodemanager.properties文件中nodemanager.host.names=SHALL940配置为宿主机机器名，也不是不可以，但是这样配置后，需要在spotfire docker container中配置hosts指定nm所在服务器ip host为 所在服务器机器名如:172.168.11.12 SHALL940即可
 
 
 	
