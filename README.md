@@ -8,3 +8,5 @@
 ###问题3：[替换spotfire很多位置logo，title,pageName等](https://github.com/xiaoping1993/spotfire_issues/blob/master/resource/spotfire%E6%9B%BF%E6%8D%A2logo.md "替换spotfire很多位置logo，title,pageName等")
 
 ###问题4：[docker理论知识与spotfire docker部署](https://github.com/xiaoping1993/spotfire_issues/blob/master/resource/spotfire%20docker.md "docker理论知识与spotfire docker部署")
+
+###问题5：[spotfire调用外部python包](https://github.com/xiaoping1993/spotfire_issues/blob/master/resource/spotfire调用外部python包.md "spotfire调用外部python包")
